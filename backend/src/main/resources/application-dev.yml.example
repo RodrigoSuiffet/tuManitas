@@ -1,0 +1,44 @@
+# Renombrar a application-dev.yml y completar valores. Este fichero está en .gitignore.
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/elgremio
+    username: elgremio
+    password: elgremio
+
+  jpa:
+    show-sql: true
+
+  flyway:
+    baseline-on-migrate: true
+
+logging:
+  level:
+    com.elgremio: DEBUG
+    org.springframework.security: DEBUG
+    org.flywaydb: DEBUG
+
+springdoc:
+  swagger-ui:
+    enabled: true
+
+jwt:
+  private-key: classpath:keys/dev-private.pem
+  public-key: classpath:keys/dev-public.pem
+
+aws:
+  region: eu-west-1
+  s3:
+    bucket-public: elgremio-public-dev
+    bucket-private: elgremio-private-dev
+    bucket-docs: elgremio-docs-dev
+  cdn-base-url: http://localhost:4566
+
+sendgrid:
+  api-key: SG.CHANGE_ME
+  from-email: dev@elgremio.es
+
+firebase:
+  enabled: false
+
+cors:
+  allowed-origins: http://localhost:5173

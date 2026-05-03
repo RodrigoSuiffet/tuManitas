@@ -1,0 +1,66 @@
+# ---- Java / Maven ----
+target/
+*.class
+*.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# Maven wrapper
+.mvn/wrapper/maven-wrapper.jar
+
+# IDE
+.idea/
+*.iws
+*.iml
+*.ipr
+.settings/
+.project
+.classpath
+bin/
+
+# Spring Boot: ficheros de entorno con credenciales (nunca al repo)
+backend/src/main/resources/application-dev.yml
+backend/src/main/resources/application-local.yml
+backend/src/main/resources/keys/
+
+# ---- Node / React ----
+node_modules/
+dist/
+dist-ssr/
+
+# Vite
+frontend/.vite/
+
+# Env files (solo el .example se commitea)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Build output
+frontend/dist/
+
+# Testing
+coverage/
+
+# IDE
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
