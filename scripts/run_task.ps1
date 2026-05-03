@@ -56,7 +56,7 @@ Write-Step "Obteniendo issue $issue de Linear"
 
 $issueKey = $issue.ToUpper()
 
-$query = '{ "query": "{ issue(id: \"' + $issueKey + '\") { id title description gitBranchName url state { name } } }" }'
+$query = '{ "query": "{ issue(id: \"' + $issueKey + '\") { id title description branchName url state { name } } }" }'
 
 try {
     $response = Invoke-RestMethod `
@@ -71,7 +71,7 @@ try {
     $issueData   = $response.data.issue
     $title       = $issueData.title
     $description = $issueData.description
-    $branchName  = $issueData.gitBranchName
+    $branchName  = $issueData.branchName
     $issueUrl    = $issueData.url
     $issueState  = $issueData.state.name
 } catch {
